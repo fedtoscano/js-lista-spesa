@@ -2,7 +2,15 @@
 const shoppingListEl = document.getElementById('shopping-list');
 
 //creo l'array con gli elementi da acquistare
-const shoppingListArr = ['pane', 'patate', 'frutta', 'verdura', 'millennium falcon in scala 1:1'];
+let userItem;
+const shoppingListArr = [];
+
+while(userItem !== 'stop'){
+    userItem = prompt('Inserisci un elemento da acquistare! (digita stop per concludere)')
+    shoppingListArr.push(userItem)
+}
+//per rimuovere l'ultimo elemento "stop" che viene pushato
+shoppingListArr.pop();
 
 let i = 0;
 while(shoppingListEl.childElementCount < shoppingListArr.length){
